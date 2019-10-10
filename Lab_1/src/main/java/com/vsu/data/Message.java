@@ -41,8 +41,6 @@ public class Message implements Runnable {
         Integer maxValue;
 
         for (Message message: messageList){
-            //Changez ce morceau de code
-/////////////////////////////////////////////////////////////
             message.getMessage(this.generateMessage());
             minValue = this.getMinValue();
             maxValue = message.getMaxValue();
@@ -54,7 +52,6 @@ public class Message implements Runnable {
                     );
                 }
             }
-/////////////////////////////////////////////////////////////
         }
     }
 
