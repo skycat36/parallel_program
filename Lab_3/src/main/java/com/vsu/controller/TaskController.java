@@ -26,7 +26,7 @@ public class TaskController {
 
     private void initTaska(){
         for (int i = 0; i < this.countTask; i++){
-            this.taskaList.add(new Taska(this.n, this.rang));
+            this.taskaList.add(new Taska(i, this.n, this.rang));
         }
     }
 
@@ -36,12 +36,12 @@ public class TaskController {
             taska.run();
         }
 
-        boolean ready = false;
+        boolean ready = true;
         while (ready){
-            ready = true;
+            ready = false;
             for (Taska taska: this.taskaList){
                 if (taska.isAlive()){
-                    ready = false;
+                    ready = true;
                 }
             }
         }

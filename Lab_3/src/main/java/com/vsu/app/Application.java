@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Application {
 
-    private static int N = 10000, ACCURACY = 5, COUNT_THREADS = 3;
+    private static int N = 5, ACCURACY = 5, COUNT_THREADS = 1000;
 
     public static void main(String[] args){
 
@@ -20,9 +20,9 @@ public class Application {
 
         System.out.println("Время выполнения: " + (end - start));
 
-        System.out.println("Точка:                 Значение:");
+        System.out.println("Id потока:              Точка:                 Значение:");
         for (TaskPoint pointFunc: taskController.getMaxVector()){
-            System.out.println(pointFunc.getNumber() + " :        " + pointFunc.getValue());
+            System.out.println(pointFunc.getIdTask() + ":                         " + pointFunc.getNumber() + " :                    " + pointFunc.getValue());
         }
 
     }
