@@ -1,7 +1,7 @@
-package vsu.controller;
+package com.vsu.controller;
 
-import vsu.data.PointFunc;
-import vsu.data.Taska;
+import com.vsu.data.PointFunc;
+import com.vsu.data.Taska;
 
 import java.util.ArrayList;
 import java.util.List;

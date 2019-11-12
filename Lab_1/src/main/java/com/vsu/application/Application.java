@@ -9,7 +9,7 @@ import java.util.List;
 
 public class Application {
 
-    private static int COUNT_MESSAGE = 2, COUNT_THREADS = 10;
+    private static int COUNT_MESSAGE = 1, COUNT_THREADS = 15;
 
     public static void main(String[] args){
         MessageController messageController = new MessageController();

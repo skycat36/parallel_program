@@ -1,4 +1,4 @@
-package vsu.data;
+package com.vsu.data;
 
 import org.apache.commons.math3.util.ArithmeticUtils;
 

@@ -24,30 +24,30 @@ public class Taska extends Thread {
         this.rang = rang;
     }
 
-    private Integer generateMessage(){
+    private Integer generateMessage() {
         return Integer.parseInt(String.valueOf(Math.round(Math.random() * 100)));
     }
 
-    private void initArr(){
-        for (int i=0; i < this.count; i++){
+    private void initArr() {
+        for (int i = 0; i < this.count; i++) {
             this.arr.add(new TaskPoint(this.id, i + 1, generateMessage()));
         }
 
     }
 
-    private void calcMax(){
+    private void calcMax() {
         List<TaskPoint> temp = new ArrayList<TaskPoint>();
-        if (this.count % 2 != 0){
-            for (int i = 0; i < this.count; i++){
-                if (this.arr.get(i).getNumber() % 2 != 0){
+
+            for (int i = 0; i < this.count; i++) {
+                if (this.arr.get(i).getValue() % 2 == 0) {
                     temp.add(this.arr.get(i));
                 }
             }
-
+        if (temp.size() != 0) {
             Collections.sort(temp);
             this.max = temp.get(0);
-        }else{
-            this.max = new TaskPoint(this.DEF);
+        } else {
+            this.max = new TaskPoint(this.id, this.DEF);
         }
     }
 

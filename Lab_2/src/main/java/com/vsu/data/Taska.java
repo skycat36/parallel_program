@@ -1,4 +1,4 @@
-package vsu.data;
+package com.vsu.data;
 
 public class Taska extends Thread  {
 

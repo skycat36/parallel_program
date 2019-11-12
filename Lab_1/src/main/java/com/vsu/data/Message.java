@@ -45,7 +45,7 @@ public class Message implements Runnable {
             minValue = this.getMinValue();
             maxValue = message.getMaxValue();
             if (minValue != null && maxValue != null){
-                if (maxValue < minValue){
+                if (maxValue > minValue){
                     this.messageController.sendMessage("Thread №" + message.getId()
                                     + " | Now thread  " + this.getId() + " min value " + minValue
                                     + " | Thread №" + message.getId() + " max value " + maxValue

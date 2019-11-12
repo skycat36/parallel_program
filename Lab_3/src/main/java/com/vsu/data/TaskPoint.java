@@ -14,7 +14,8 @@ public class TaskPoint implements Comparable {
         this.value = value;
     }
 
-    public TaskPoint(int value) {
+    public TaskPoint(int idTask, int value) {
+        this.idTask = idTask;
         this.value = value;
     }
 
