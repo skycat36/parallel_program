@@ -21,8 +21,22 @@ public class Taski extends Thread{
             if (rowNeedUpdate != null) {
                 double[] matrixRow = this.finalMatrix.getRow(rowNeedUpdate);
 
-                for (int i = 0; i < rowNeedUpdate; i++) {
-                    matrixRow[i] = 0;
+
+
+                if (rowNeedUpdate == (matrixRow.length-1) ){
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate] = 0;
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate + 1] = 0;
+                }
+
+                if (rowNeedUpdate == 0){
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate] = 0;
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate -1] = 0;
+                }
+
+                if (rowNeedUpdate != 0 && rowNeedUpdate != (matrixRow.length-1)){
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate] = 0;
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate -1] = 0;
+                    matrixRow[matrixRow.length-1 - rowNeedUpdate + 1] = 0;
                 }
 
                 this.finalMatrix.setRow(rowNeedUpdate, matrixRow);
@@ -32,4 +46,6 @@ public class Taski extends Thread{
             }
         }
     }
+
+
 }

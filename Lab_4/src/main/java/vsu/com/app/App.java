@@ -10,7 +10,7 @@ public class App {
 
     static int COUNT_TASK = 5;
 
-    static int RAZ_MATRIX = 100;
+    static int RAZ_MATRIX = 10;
 
     private static double[][] getRandomMatrix(int n){
         double[][] arr = new double[n][];

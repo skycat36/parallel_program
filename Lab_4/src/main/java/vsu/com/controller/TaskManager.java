@@ -19,10 +19,6 @@ public class TaskManager {
 
         int countDevideOnTask =  (int)Math.round(Math.sqrt(countTask));
 
-//        if ((countTask % 2) > 0){
-//            countDevideOnTask++;
-//        }
-
         double countDevideMatrix = nowMatrix.getRowDimension() / (countDevideOnTask);
         List<Integer> needRowUp = new ArrayList<Integer>();
         for (int i=0, j=0; i<nowMatrix.getRowDimension(); i++){
